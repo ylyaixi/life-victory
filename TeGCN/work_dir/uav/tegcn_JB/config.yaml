@@ -1,0 +1,54 @@
+# command line: main.py --config ./config/train/tegcn_jb.yaml
+
+base_lr: 0.1
+batch_size: 16
+config: ./config/train/tegcn_jb.yaml
+device: 0
+eval_interval: 5
+feeder: feeders.feeder.Feeder
+ignore_weights: []
+log_interval: 100
+lr_decay_rate: 0.1
+model: model.tegcn.Model
+model_args:
+  graph: graph.uav_te.Graph
+  graph_args:
+    labeling_mode: spatial
+  num_class: 155
+  num_person: 2
+  num_point: 17
+model_saved_name: ./runs/tegcn_JB
+nesterov: true
+num_epoch: 50
+num_worker: 32
+optimizer: SGD
+phase: train
+print_log: true
+save_epoch: 30
+save_interval: 1
+save_score: false
+seed: 1
+show_topk:
+- 1
+- 5
+start_epoch: 0
+step:
+- 30
+- 40
+test_batch_size: 16
+test_feeder_args:
+  data_path: ../data/val_joint_bone.npy
+  label_path: ../data/val_label.npy
+train_feeder_args:
+  data_path: ../data/train_joint_bone.npy
+  debug: false
+  label_path: ../data/train_label.npy
+  normalization: false
+  random_choose: false
+  random_move: false
+  random_shift: false
+  window_size: -1
+warm_up_epoch: 0
+weight_decay: 0.0001
+weights: null
+work_dir: ./work_dir/uav/tegcn_JB

@@ -1,0 +1,39 @@
+work_dir: ./work_dir/uav/tegcn_JB
+model_saved_name: ./runs/tegcn_JB
+# feeder
+feeder: feeders.feeder.Feeder
+train_feeder_args:
+  data_path: ../data/train_joint_bone.npy
+  label_path: ../data/train_label.npy
+  debug: False
+  random_choose: False
+  random_shift: False
+  random_move: False
+  window_size: -1
+  normalization: False
+
+test_feeder_args:
+  data_path: ../data/val_joint_bone.npy
+  label_path: ../data/val_label.npy
+
+# model
+model: model.tegcn.Model
+model_args:
+  num_class: 155
+  num_point: 17
+  num_person: 2
+  graph: graph.uav_te.Graph
+  graph_args:
+    labeling_mode: 'spatial'
+
+#optim
+weight_decay: 0.0001
+base_lr: 0.1
+step: [30, 40]
+
+# training
+device: 0
+batch_size: 16
+test_batch_size: 16
+num_epoch: 50
+nesterov: True

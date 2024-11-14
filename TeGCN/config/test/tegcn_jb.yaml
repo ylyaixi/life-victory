@@ -1,0 +1,27 @@
+# 预测得分保存路径
+work_dir: ../ensemble_results/tegcn/test/tegcn_jb
+
+# feeder
+feeder: feeders.feeder.Feeder
+test_feeder_args:
+  data_path: ../data/test_joint_bone.npy
+  label_path: ../data/test_label.npy
+  debug: False
+
+# model
+model: model.tegcn.Model
+model_args:
+  num_class: 155
+  num_point: 17
+  num_person: 2
+  graph: graph.uav_te.Graph
+  graph_args:
+    labeling_mode: 'spatial'
+
+# test
+phase: test
+device: 0
+test_batch_size: 128
+weights: work_dir/best/tegcn_jb/te_g-41-10962.pt
+
+save_score: True

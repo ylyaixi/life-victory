@@ -1,0 +1,24 @@
+[ Fri Nov  8 20:45:29 2024 ] using warm up, epoch: 5
+[ Fri Nov  8 20:45:52 2024 ] using warm up, epoch: 5
+[ Fri Nov  8 20:45:55 2024 ] Modelargs:
+{'work_dir': './work_dir/uav/DeGCN_jmf', 'model_saved_name': './work_dir/uav/DeGCN_jmf/runs', 'config': 'config/train/jmf.yaml', 'phase': 'train', 'save_score': True, 'seed': 1, 'log_interval': 100, 'save_interval': 1, 'save_epoch': 0, 'eval_interval': 5, 'print_log': True, 'show_topk': [1, 5], 'feeder': 'feeders.feeder_ntu.Feeder', 'num_worker': 0, 'train_feeder_args': {'data_path': '../data/train_joint.npy', 'label_path': '../data/train_label.npy', 'split': 'train', 'debug': False, 'random_choose': False, 'random_shift': True, 'random_move': False, 'window_size': 64, 'normalization': False, 'random_rot': True, 'p_interval': [0.5, 1], 'vel': False, 'bone': False}, 'test_feeder_args': {'data_path': '../data/val_joint.npy', 'label_path': '../data/val_label.npy', 'split': 'test', 'window_size': 64, 'p_interval': [0.95], 'vel': False, 'bone': False, 'debug': False}, 'model': 'model.jmf.Model', 'model_args': {'num_class': 155, 'num_point': 17, 'num_person': 2, 'k': 8, 'eta': 4, 'num_stream': 2, 'graph': 'graph.ntu_rgb_d.Graph', 'graph_args': {'labeling_mode': 'spatial'}}, 'weights': None, 'ignore_weights': [], 'base_lr': 0.1, 'step': [35, 60, 75], 'device': [0], 'optimizer': 'SGD', 'nesterov': True, 'batch_size': 8, 'test_batch_size': 8, 'start_epoch': 0, 'num_epoch': 80, 'weight_decay': 0.0004, 'warm_up_epoch': 5, 'cosine_epoch': 60, 'half': False}
+
+[ Fri Nov  8 20:45:55 2024 ] Model profile: 1.12G FLOPs and 1.39M Parameters
+[ Fri Nov  8 20:45:55 2024 ] ****************************************************************************************************
+[ Fri Nov  8 20:45:55 2024 ] Training epoch: 1
+[ Fri Nov  8 20:51:32 2024 ] 	Mean training loss: 8.9388.  Mean training acc: 4.65%.
+[ Fri Nov  8 20:51:32 2024 ] 	Time consumption: [Data]02%, [Network]98%
+[ Fri Nov  8 20:51:32 2024 ] Eval epoch: 1
+[ Fri Nov  8 20:51:42 2024 ] 	Mean test loss of 250 batches: 10.53514605140686.
+[ Fri Nov  8 20:51:42 2024 ] 	Top1: 7.75%
+[ Fri Nov  8 20:51:42 2024 ] 	Top5: 27.60%
+[ Fri Nov  8 20:51:42 2024 ] Best_Accuracy: 7.75%, epoch: 1
+[ Fri Nov  8 20:51:42 2024 ] ****************************************************************************************************
+[ Fri Nov  8 20:51:42 2024 ] Training epoch: 2
+[ Mon Nov 11 14:16:59 2024 ] using warm up, epoch: 5
+[ Mon Nov 11 14:17:00 2024 ] Modelargs:
+{'work_dir': './work_dir/uav/DeGCN_jmf', 'model_saved_name': './work_dir/uav/DeGCN_jmf/runs', 'config': 'config/train/jmf.yaml', 'phase': 'train', 'save_score': True, 'seed': 1, 'log_interval': 100, 'save_interval': 1, 'save_epoch': 0, 'eval_interval': 5, 'print_log': True, 'show_topk': [1, 5], 'feeder': 'feeders.feeder_ntu.Feeder', 'num_worker': 0, 'train_feeder_args': {'data_path': '../data/train_joint.npy', 'label_path': '../data/train_label.npy', 'split': 'train', 'debug': False, 'random_choose': False, 'random_shift': True, 'random_move': False, 'window_size': 64, 'normalization': False, 'random_rot': True, 'p_interval': [0.5, 1], 'vel': False, 'bone': False}, 'test_feeder_args': {'data_path': '../data/val_joint.npy', 'label_path': '../data/val_label.npy', 'split': 'test', 'window_size': 64, 'p_interval': [0.95], 'vel': False, 'bone': False, 'debug': False}, 'model': 'model.jmf.Model', 'model_args': {'num_class': 155, 'num_point': 17, 'num_person': 2, 'k': 8, 'eta': 4, 'num_stream': 2, 'graph': 'graph.ntu_rgb_d.Graph', 'graph_args': {'labeling_mode': 'spatial'}}, 'weights': None, 'ignore_weights': [], 'base_lr': 0.1, 'step': [35, 60, 75], 'device': [0], 'optimizer': 'SGD', 'nesterov': True, 'batch_size': 8, 'test_batch_size': 8, 'start_epoch': 0, 'num_epoch': 80, 'weight_decay': 0.0004, 'warm_up_epoch': 5, 'cosine_epoch': 60, 'half': False}
+
+[ Mon Nov 11 14:17:00 2024 ] Model profile: 1.12G FLOPs and 1.39M Parameters
+[ Mon Nov 11 14:17:00 2024 ] ****************************************************************************************************
+[ Mon Nov 11 14:17:00 2024 ] Training epoch: 1
