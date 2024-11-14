@@ -1,0 +1,37 @@
+[ 2024-11-10 18:53 ] Model load finished: model.sttformer.Model
+[ 2024-11-10 18:58 ] Model load finished: model.sttformer.Model
+[ 2024-11-10 18:58 ] Model load finished: model.sttformer.Model
+[ 2024-11-10 18:58 ] Data load finished
+[ 2024-11-10 18:58 ] Optimizer load finished: SGD
+[ 2024-11-10 18:58 ] base_lr: 0.1
+[ 2024-11-10 18:58 ] batch_size: 8
+[ 2024-11-10 18:58 ] config: ./config/train/angle.yaml
+[ 2024-11-10 18:58 ] cuda_visible_device: 0,1,2,3
+[ 2024-11-10 18:58 ] device: [0]
+[ 2024-11-10 18:58 ] eval_interval: 5
+[ 2024-11-10 18:58 ] feeder: feeders.feeder_uav.Feeder
+[ 2024-11-10 18:58 ] ignore_weights: []
+[ 2024-11-10 18:58 ] lr_decay_rate: 0.1
+[ 2024-11-10 18:58 ] model: model.sttformer.Model
+[ 2024-11-10 18:58 ] model_args: {'len_parts': 6, 'num_frames': 120, 'num_joints': 17, 'num_classes': 155, 'num_heads': 3, 'kernel_size': [3, 5], 'num_persons': 2, 'num_channels': 9, 'use_pes': True, 'config': [[64, 64, 16], [64, 64, 16], [64, 128, 32], [128, 128, 32], [128, 256, 64], [256, 256, 64], [256, 256, 64], [256, 256, 64]]}
+[ 2024-11-10 18:58 ] nesterov: True
+[ 2024-11-10 18:58 ] num_epoch: 90
+[ 2024-11-10 18:58 ] num_worker: 0
+[ 2024-11-10 18:58 ] optimizer: SGD
+[ 2024-11-10 18:58 ] print_log: True
+[ 2024-11-10 18:58 ] run_mode: train
+[ 2024-11-10 18:58 ] save_epoch: 80
+[ 2024-11-10 18:58 ] save_score: True
+[ 2024-11-10 18:58 ] show_topk: [1, 5]
+[ 2024-11-10 18:58 ] start_epoch: 0
+[ 2024-11-10 18:58 ] step: [60, 80]
+[ 2024-11-10 18:58 ] test_batch_size: 8
+[ 2024-11-10 18:58 ] test_feeder_args: {'data_path': '../data/val_angle_joint.npy', 'label_path': '../data/val_label.npy', 'split': 'test', 'debug': False, 'window_size': 120, 'p_interval': [0.95], 'vel': False, 'bone': False}
+[ 2024-11-10 18:58 ] train_feeder_args: {'data_path': '../data/train_angle_joint.npy', 'label_path': '../data/train_label.npy', 'split': 'train', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': 120, 'normalization': False, 'random_rot': False, 'p_interval': [0.5, 1], 'vel': False, 'bone': False}
+[ 2024-11-10 18:58 ] warm_up_epoch: 5
+[ 2024-11-10 18:58 ] weight_decay: 0.0004
+[ 2024-11-10 18:58 ] weights: None
+[ 2024-11-10 18:58 ] work_dir: ./work_dir/train/angle
+[ 2024-11-10 18:58 ] # Parameters: 5968083
+[ 2024-11-10 18:58 ] ###***************start training***************###
+[ 2024-11-10 18:58 ] adjust learning rate, using warm up, epoch: 5

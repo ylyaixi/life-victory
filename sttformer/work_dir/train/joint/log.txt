@@ -1,0 +1,141 @@
+[ 2024-11-10 14:49 ] Model load finished: model.sttformer.Model
+[ 2024-11-10 18:51 ] Model load finished: model.sttformer.Model
+[ 2024-11-10 18:51 ] Data load finished
+[ 2024-11-10 18:51 ] Optimizer load finished: SGD
+[ 2024-11-10 18:51 ] base_lr: 0.1
+[ 2024-11-10 18:51 ] batch_size: 32
+[ 2024-11-10 18:51 ] config: ./config/train/joint.yaml
+[ 2024-11-10 18:51 ] cuda_visible_device: 0,1,2,3
+[ 2024-11-10 18:51 ] device: [0]
+[ 2024-11-10 18:51 ] eval_interval: 5
+[ 2024-11-10 18:51 ] feeder: feeders.feeder_uav.Feeder
+[ 2024-11-10 18:51 ] ignore_weights: []
+[ 2024-11-10 18:51 ] lr_decay_rate: 0.1
+[ 2024-11-10 18:51 ] model: model.sttformer.Model
+[ 2024-11-10 18:51 ] model_args: {'len_parts': 6, 'num_frames': 120, 'num_joints': 17, 'num_classes': 155, 'num_heads': 3, 'kernel_size': [3, 5], 'num_persons': 2, 'num_channels': 3, 'use_pes': True, 'config': [[64, 64, 16], [64, 64, 16], [64, 128, 32], [128, 128, 32], [128, 256, 64], [256, 256, 64], [256, 256, 64], [256, 256, 64]]}
+[ 2024-11-10 18:51 ] nesterov: True
+[ 2024-11-10 18:51 ] num_epoch: 90
+[ 2024-11-10 18:51 ] num_worker: 0
+[ 2024-11-10 18:51 ] optimizer: SGD
+[ 2024-11-10 18:51 ] print_log: True
+[ 2024-11-10 18:51 ] run_mode: train
+[ 2024-11-10 18:51 ] save_epoch: 80
+[ 2024-11-10 18:51 ] save_score: True
+[ 2024-11-10 18:51 ] show_topk: [1, 5]
+[ 2024-11-10 18:51 ] start_epoch: 0
+[ 2024-11-10 18:51 ] step: [60, 80]
+[ 2024-11-10 18:51 ] test_batch_size: 32
+[ 2024-11-10 18:51 ] test_feeder_args: {'data_path': '../data/train_joint.npy', 'label_path': '../data/train_label.npy', 'split': 'test', 'debug': False, 'window_size': 120, 'p_interval': [0.95], 'vel': False, 'bone': False}
+[ 2024-11-10 18:51 ] train_feeder_args: {'data_path': '../data/train_joint.npy', 'label_path': '../data/train_label.npy', 'split': 'train', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': 120, 'normalization': False, 'random_rot': True, 'p_interval': [0.5, 1], 'vel': False, 'bone': False}
+[ 2024-11-10 18:51 ] warm_up_epoch: 5
+[ 2024-11-10 18:51 ] weight_decay: 0.0004
+[ 2024-11-10 18:51 ] weights: None
+[ 2024-11-10 18:51 ] work_dir: ./work_dir/train/joint
+[ 2024-11-10 18:51 ] # Parameters: 5967699
+[ 2024-11-10 18:51 ] ###***************start training***************###
+[ 2024-11-10 18:51 ] adjust learning rate, using warm up, epoch: 5
+[ 2024-11-10 18:51 ] Model load finished: model.sttformer.Model
+[ 2024-11-10 18:51 ] Data load finished
+[ 2024-11-10 18:51 ] Optimizer load finished: SGD
+[ 2024-11-10 18:51 ] base_lr: 0.1
+[ 2024-11-10 18:51 ] batch_size: 8
+[ 2024-11-10 18:51 ] config: ./config/train/joint.yaml
+[ 2024-11-10 18:51 ] cuda_visible_device: 0,1,2,3
+[ 2024-11-10 18:51 ] device: [0]
+[ 2024-11-10 18:51 ] eval_interval: 5
+[ 2024-11-10 18:51 ] feeder: feeders.feeder_uav.Feeder
+[ 2024-11-10 18:51 ] ignore_weights: []
+[ 2024-11-10 18:51 ] lr_decay_rate: 0.1
+[ 2024-11-10 18:51 ] model: model.sttformer.Model
+[ 2024-11-10 18:51 ] model_args: {'len_parts': 6, 'num_frames': 120, 'num_joints': 17, 'num_classes': 155, 'num_heads': 3, 'kernel_size': [3, 5], 'num_persons': 2, 'num_channels': 3, 'use_pes': True, 'config': [[64, 64, 16], [64, 64, 16], [64, 128, 32], [128, 128, 32], [128, 256, 64], [256, 256, 64], [256, 256, 64], [256, 256, 64]]}
+[ 2024-11-10 18:51 ] nesterov: True
+[ 2024-11-10 18:51 ] num_epoch: 90
+[ 2024-11-10 18:51 ] num_worker: 0
+[ 2024-11-10 18:51 ] optimizer: SGD
+[ 2024-11-10 18:51 ] print_log: True
+[ 2024-11-10 18:51 ] run_mode: train
+[ 2024-11-10 18:51 ] save_epoch: 80
+[ 2024-11-10 18:51 ] save_score: True
+[ 2024-11-10 18:51 ] show_topk: [1, 5]
+[ 2024-11-10 18:51 ] start_epoch: 0
+[ 2024-11-10 18:51 ] step: [60, 80]
+[ 2024-11-10 18:51 ] test_batch_size: 8
+[ 2024-11-10 18:51 ] test_feeder_args: {'data_path': '../data/train_joint.npy', 'label_path': '../data/train_label.npy', 'split': 'test', 'debug': False, 'window_size': 120, 'p_interval': [0.95], 'vel': False, 'bone': False}
+[ 2024-11-10 18:51 ] train_feeder_args: {'data_path': '../data/train_joint.npy', 'label_path': '../data/train_label.npy', 'split': 'train', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': 120, 'normalization': False, 'random_rot': True, 'p_interval': [0.5, 1], 'vel': False, 'bone': False}
+[ 2024-11-10 18:51 ] warm_up_epoch: 5
+[ 2024-11-10 18:51 ] weight_decay: 0.0004
+[ 2024-11-10 18:51 ] weights: None
+[ 2024-11-10 18:51 ] work_dir: ./work_dir/train/joint
+[ 2024-11-10 18:51 ] # Parameters: 5967699
+[ 2024-11-10 18:51 ] ###***************start training***************###
+[ 2024-11-10 18:51 ] adjust learning rate, using warm up, epoch: 5
+[ 2024-11-10 19:37 ] Model load finished: model.sttformer.Model
+[ 2024-11-10 19:37 ] Data load finished
+[ 2024-11-10 19:37 ] Optimizer load finished: SGD
+[ 2024-11-10 19:37 ] base_lr: 0.1
+[ 2024-11-10 19:37 ] batch_size: 8
+[ 2024-11-10 19:37 ] config: ./config/train/joint.yaml
+[ 2024-11-10 19:37 ] cuda_visible_device: 0,1,2,3
+[ 2024-11-10 19:37 ] device: [0]
+[ 2024-11-10 19:37 ] eval_interval: 5
+[ 2024-11-10 19:37 ] feeder: feeders.feeder_uav.Feeder
+[ 2024-11-10 19:37 ] ignore_weights: []
+[ 2024-11-10 19:37 ] lr_decay_rate: 0.1
+[ 2024-11-10 19:37 ] model: model.sttformer.Model
+[ 2024-11-10 19:37 ] model_args: {'len_parts': 6, 'num_frames': 120, 'num_joints': 17, 'num_classes': 155, 'num_heads': 3, 'kernel_size': [3, 5], 'num_persons': 2, 'num_channels': 3, 'use_pes': True, 'config': [[64, 64, 16], [64, 64, 16], [64, 128, 32], [128, 128, 32], [128, 256, 64], [256, 256, 64], [256, 256, 64], [256, 256, 64]]}
+[ 2024-11-10 19:37 ] nesterov: True
+[ 2024-11-10 19:37 ] num_epoch: 90
+[ 2024-11-10 19:37 ] num_worker: 0
+[ 2024-11-10 19:37 ] optimizer: SGD
+[ 2024-11-10 19:37 ] print_log: True
+[ 2024-11-10 19:37 ] run_mode: train
+[ 2024-11-10 19:37 ] save_epoch: 80
+[ 2024-11-10 19:37 ] save_score: True
+[ 2024-11-10 19:37 ] show_topk: [1, 5]
+[ 2024-11-10 19:37 ] start_epoch: 0
+[ 2024-11-10 19:37 ] step: [60, 80]
+[ 2024-11-10 19:37 ] test_batch_size: 8
+[ 2024-11-10 19:37 ] test_feeder_args: {'data_path': '../data/val_joint.npy', 'label_path': '../data/val_label.npy', 'split': 'test', 'debug': False, 'window_size': 120, 'p_interval': [0.95], 'vel': False, 'bone': False}
+[ 2024-11-10 19:37 ] train_feeder_args: {'data_path': '../data/train_joint.npy', 'label_path': '../data/train_label.npy', 'split': 'train', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': 120, 'normalization': False, 'random_rot': True, 'p_interval': [0.5, 1], 'vel': False, 'bone': False}
+[ 2024-11-10 19:37 ] warm_up_epoch: 5
+[ 2024-11-10 19:37 ] weight_decay: 0.0004
+[ 2024-11-10 19:37 ] weights: None
+[ 2024-11-10 19:37 ] work_dir: ./work_dir/train/joint
+[ 2024-11-10 19:37 ] # Parameters: 5967699
+[ 2024-11-10 19:37 ] ###***************start training***************###
+[ 2024-11-10 19:37 ] adjust learning rate, using warm up, epoch: 5
+[ 2024-11-11 14:53 ] Model load finished: model.sttformer.Model
+[ 2024-11-11 14:53 ] Data load finished
+[ 2024-11-11 14:54 ] Optimizer load finished: SGD
+[ 2024-11-11 14:54 ] base_lr: 0.1
+[ 2024-11-11 14:54 ] batch_size: 8
+[ 2024-11-11 14:54 ] config: ./config/train/joint.yaml
+[ 2024-11-11 14:54 ] cuda_visible_device: 0,1,2,3
+[ 2024-11-11 14:54 ] device: [0]
+[ 2024-11-11 14:54 ] eval_interval: 5
+[ 2024-11-11 14:54 ] feeder: feeders.feeder_uav.Feeder
+[ 2024-11-11 14:54 ] ignore_weights: []
+[ 2024-11-11 14:54 ] lr_decay_rate: 0.1
+[ 2024-11-11 14:54 ] model: model.sttformer.Model
+[ 2024-11-11 14:54 ] model_args: {'len_parts': 6, 'num_frames': 120, 'num_joints': 17, 'num_classes': 155, 'num_heads': 3, 'kernel_size': [3, 5], 'num_persons': 2, 'num_channels': 3, 'use_pes': True, 'config': [[64, 64, 16], [64, 64, 16], [64, 128, 32], [128, 128, 32], [128, 256, 64], [256, 256, 64], [256, 256, 64], [256, 256, 64]]}
+[ 2024-11-11 14:54 ] nesterov: True
+[ 2024-11-11 14:54 ] num_epoch: 90
+[ 2024-11-11 14:54 ] num_worker: 0
+[ 2024-11-11 14:54 ] optimizer: SGD
+[ 2024-11-11 14:54 ] print_log: True
+[ 2024-11-11 14:54 ] run_mode: train
+[ 2024-11-11 14:54 ] save_epoch: 80
+[ 2024-11-11 14:54 ] save_score: True
+[ 2024-11-11 14:54 ] show_topk: [1, 5]
+[ 2024-11-11 14:54 ] start_epoch: 0
+[ 2024-11-11 14:54 ] step: [60, 80]
+[ 2024-11-11 14:54 ] test_batch_size: 8
+[ 2024-11-11 14:54 ] test_feeder_args: {'data_path': '../data/val_joint.npy', 'label_path': '../data/val_label.npy', 'split': 'test', 'debug': False, 'window_size': 120, 'p_interval': [0.95], 'vel': False, 'bone': False}
+[ 2024-11-11 14:54 ] train_feeder_args: {'data_path': '../data/train_joint.npy', 'label_path': '../data/train_label.npy', 'split': 'train', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': 120, 'normalization': False, 'random_rot': True, 'p_interval': [0.5, 1], 'vel': False, 'bone': False}
+[ 2024-11-11 14:54 ] warm_up_epoch: 5
+[ 2024-11-11 14:54 ] weight_decay: 0.0004
+[ 2024-11-11 14:54 ] weights: None
+[ 2024-11-11 14:54 ] work_dir: ./work_dir/train/joint
+[ 2024-11-11 14:54 ] # Parameters: 5967699
+[ 2024-11-11 14:54 ] ###***************start training***************###
+[ 2024-11-11 14:54 ] adjust learning rate, using warm up, epoch: 5
