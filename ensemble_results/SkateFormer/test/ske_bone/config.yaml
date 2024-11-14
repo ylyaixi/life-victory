@@ -1,0 +1,93 @@
+# command line: main.py --config ./config/test/uav_b.yaml
+
+base_lr: 0.001
+batch_size: 64
+config: ./config/test/uav_b.yaml
+device:
+- 0
+eval_interval: 5
+feeder: feeders.feeder_uav.Feeder
+grad_clip: true
+grad_max: 1.0
+ignore_weights: []
+log_interval: 100
+loss_type: CE
+lr_decay_rate: 0.1
+lr_ratio: 0.001
+lr_scheduler: cosine
+min_lr: 1.0e-05
+model: model.SkateFormer.SkateFormer_
+model_args:
+  attn_drop: 0.5
+  drop_path: 0.2
+  head_drop: 0.0
+  index_t: true
+  kernel_size: 7
+  mlp_ratio: 4.0
+  num_classes: 155
+  num_heads: 32
+  num_people: 2
+  num_points: 16
+  rel: true
+  type_1_size:
+  - 8
+  - 4
+  type_2_size:
+  - 8
+  - 8
+  type_3_size:
+  - 8
+  - 4
+  type_4_size:
+  - 8
+  - 8
+model_saved_name: ''
+nesterov: true
+num_epoch: 500
+num_worker: 12
+optimizer: AdamW
+phase: test
+print_log: true
+save_epoch: 30
+save_interval: 1
+save_score: false
+seed: 1
+show_topk:
+- 1
+- 5
+start_epoch: 0
+test_batch_size: 64
+test_feeder_args:
+  data_path: ../data/test_joint.npy
+  data_type: b
+  debug: false
+  label_path: ../data/test_label.npy
+  p_interval:
+  - 0.95
+  partition: true
+  split: test
+  thres: 64
+  uniform: true
+  window_size: 64
+train_feeder_args:
+  aug_method: a123489
+  data_path: ../data/train_joint_new.npy
+  data_type: b
+  debug: false
+  inter_p: 0.2
+  intra_p: 0.5
+  label_path: ../data/train_label_new.npy
+  p_interval:
+  - 0.5
+  - 1
+  partition: true
+  split: train
+  thres: 64
+  uniform: true
+  window_size: 64
+warm_up_epoch: 25
+warmup_lr: 1.0e-07
+warmup_prefix: false
+weight_decay: 0.1
+weights: ./work_dir/best/ske_b/runs-469-122409.pt
+work_dir: ../ensemble_results/SkateFormer/test/ske_bone

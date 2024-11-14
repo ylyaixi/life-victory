@@ -1,0 +1,3 @@
+[ 2024-11-11 14:58 ] Load weights from ./work_dir/best/joint/joint.pt
+[ 2024-11-11 14:58 ] Model load finished: model.sttformer.Model
+[ 2024-11-11 14:58 ] Data load finished

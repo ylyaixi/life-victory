@@ -1,0 +1,4 @@
+[ Mon Nov 11 15:24:55 2024 ] Load weights from work_dir/best/tegcn_jb/te_g-41-10962.pt.
+[ Mon Nov 11 15:24:56 2024 ] using warm up, epoch: 0
+[ Mon Nov 11 15:25:32 2024 ] Load weights from work_dir/best/tegcn_jb/te_g-41-10962.pt.
+[ Mon Nov 11 15:25:33 2024 ] using warm up, epoch: 0

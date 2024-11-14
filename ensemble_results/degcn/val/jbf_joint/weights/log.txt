@@ -1,0 +1,2 @@
+[ Mon Nov 11 14:32:06 2024 ] Load weights from work_dir/best/jbf/epoch_73_50808.pt.
+[ Mon Nov 11 14:32:07 2024 ] using warm up, epoch: 5

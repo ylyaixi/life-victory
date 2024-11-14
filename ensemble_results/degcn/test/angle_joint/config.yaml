@@ -1,0 +1,74 @@
+# command line: main_a.py --phase test --weights work_dir/best/angle_j/epoch_70_33390.pt --save-score true --config config/test/angle_joint.yaml
+
+base_lr: 0.1
+batch_size: 8
+config: config/test/angle_joint.yaml
+cosine_epoch: 60
+device:
+- 0
+eval_interval: 5
+feeder: feeders.feeder_ntu.Feeder
+half: false
+ignore_weights: []
+log_interval: 100
+model: model.degcn_a.Model
+model_args:
+  eta: 4
+  graph: graph.ntu_rgb_d.Graph
+  graph_args:
+    labeling_mode: spatial
+  k: 8
+  num_class: 155
+  num_person: 2
+  num_point: 17
+  num_stream: 2
+model_saved_name: ''
+nesterov: true
+num_epoch: 80
+num_worker: 0
+optimizer: SGD
+phase: test
+print_log: true
+save_epoch: 0
+save_interval: 1
+save_score: true
+seed: 1
+show_topk:
+- 1
+- 5
+start_epoch: 0
+step:
+- 35
+- 60
+- 75
+test_batch_size: 8
+test_feeder_args:
+  bone: false
+  data_path: ../data/test_angle_joint.npy
+  debug: false
+  label_path: ../data/test_label.npy
+  p_interval:
+  - 0.95
+  split: test
+  vel: false
+  window_size: 64
+train_feeder_args:
+  bone: false
+  data_path: ../data/train_angle_joint.npy
+  debug: false
+  label_path: ../data/train_label.npy
+  normalization: false
+  p_interval:
+  - 0.5
+  - 1
+  random_choose: false
+  random_move: false
+  random_rot: true
+  random_shift: true
+  split: train
+  vel: false
+  window_size: 64
+warm_up_epoch: 5
+weight_decay: 0.0004
+weights: work_dir/best/angle_j/epoch_70_33390.pt
+work_dir: ../ensemble_results/degcn/test/angle_joint

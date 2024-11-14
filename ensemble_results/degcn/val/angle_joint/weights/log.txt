@@ -1,0 +1,4 @@
+[ Mon Nov 11 14:32:51 2024 ] Load weights from work_dir/best/angle_j/epoch_70_33390.pt.
+[ Mon Nov 11 14:33:09 2024 ] Load weights from work_dir/best/angle_j/epoch_70_33390.pt.
+[ Mon Nov 11 14:33:44 2024 ] Load weights from work_dir/best/angle_j/epoch_70_33390.pt.
+[ Mon Nov 11 14:33:44 2024 ] using warm up, epoch: 5
