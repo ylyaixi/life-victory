@@ -1,0 +1,72 @@
+seed: 1
+num_worker: 12
+work_dir: ../ensemble_results/SkateFormer/val/ske_joint
+
+phase: test
+weights: ./work_dir/best/ske_j/runs-473-123453.pt
+
+# feeder
+feeder: feeders.feeder_uav.Feeder
+train_feeder_args:
+  data_path: ../data/train_joint_new.npy
+  label_path: ../data/train_label_new.npy
+  split: train
+  debug: False
+  window_size: 64
+  p_interval: [0.5, 1]
+  aug_method: a123489
+  intra_p: 0.5
+  inter_p: 0.2
+  thres: 64
+  uniform: True
+  partition: True
+
+test_feeder_args:
+  data_path: ../data/val_joint.npy
+  label_path: ../data/val_label.npy
+  split: test
+  window_size: 64
+  p_interval: [0.95]
+  thres: 64
+  uniform: True
+  partition: True
+  debug: False
+
+# model
+model: model.SkateFormer.SkateFormer_
+model_args:
+  num_classes: 155
+  num_people: 2
+  num_points: 16
+  kernel_size: 7
+  num_heads: 32
+  attn_drop: 0.5
+  head_drop: 0.0
+  rel: True
+  drop_path: 0.2
+  type_1_size: [8, 4]
+  type_2_size: [8, 8]
+  type_3_size: [8, 4]
+  type_4_size: [8, 8]
+  mlp_ratio: 4.0
+  index_t: True
+
+#optim
+optimizer: AdamW
+weight_decay: 0.1
+lr_scheduler: cosine
+base_lr: 1e-3
+min_lr: 1e-5
+warmup_lr: 1e-7
+warmup_prefix: False
+warm_up_epoch: 25
+
+# training
+device: [0]
+batch_size: 32
+test_batch_size: 32
+num_epoch: 500
+nesterov: True
+grad_clip: True
+grad_max: 1.0
+loss_type: CE

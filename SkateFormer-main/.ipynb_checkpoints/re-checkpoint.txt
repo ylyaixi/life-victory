@@ -1,0 +1,11 @@
+pip install scikit-learn
+pip install tensorboardX
+pip install -e torchlight
+pip install h5py
+pip install timm
+
+
+python main.py --config ./config/uav_j.yaml
+python main.py --config ./config/uav_b.yaml 
+python main.py --config ./config/uav_jm.yaml
+python main.py --config ./config/uav_bm.yaml 
