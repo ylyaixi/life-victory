@@ -32,7 +32,7 @@ pip install -r requirements.txt
 3. 数据集处理出motion模态数据：运行`python gen_modal.py --modal motion`得到motion模态的数据
 4. bone模态与joint模态合并：运行`python gen_modal.py --modal jmb`得到合并模态的数据
 5. 将gen_modal.py文件第16行替换为`sets = {'train', 'val'}`
-6. 重复3，4,  5步骤
+6. 重复2，3,   4步骤
 7. 依次运行以下命令
 
 ```
