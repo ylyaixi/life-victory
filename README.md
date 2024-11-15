@@ -17,6 +17,13 @@ pip install -r requirements.txt
 ## 二、数据位置
 
 > 数据存放于**data**目录下，将数据集解压到data目录下
+>
+> 数据下载：
+>
+> 通过百度网盘分享的文件：data.zip
+> 链接：https://pan.baidu.com/s/1mn4sMx_wN8GZtwAnWQp3zQ?pwd=jcuj 
+> 提取码：jcuj 
+> --来自百度网盘超级会员V1的分享
 
 ### 数据处理
 
