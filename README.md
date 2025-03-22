@@ -1,3 +1,7 @@
+# 基于无人机的人体行为识别
+
+项目详情请见[项目说明书](https://github.com/ylyaixi/life-victory/blob/main/%E5%9F%BA%E4%BA%8E%E6%97%A0%E4%BA%BA%E6%9C%BA%E7%9A%84%E4%BA%BA%E4%BD%93%E8%A1%8C%E4%B8%BA%E8%AF%86%E5%88%AB%E8%AF%B4%E6%98%8E%E4%B9%A6.pdf)  
+  
 ## 一、环境配置
 
 ```
